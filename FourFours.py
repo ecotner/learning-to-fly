@@ -2,6 +2,39 @@
 """
 Created on Mon Jul 10 21:01:02 2017
 
+Script for generating solutions to the game "Four fours".
+
+THE GAME: The object of the game is to generate as many of the positive integers (in order) as possible,
+using only four fours and a selected set of mathematical functions (such as addition, multiplication,
+factorial, exponentiation, etc).
+Example:
+    0 = (4+4)-(4+4)
+    1 = (4/4)*(4/4)
+    2 = (4*4)/(4+4)
+    etc...
+
+THE THEORY: Each allowed function can be divided into two subsets: unary and binary. Unary functions take
+a single argument and return a single number. Binary functions take two arguments and return a single
+number. Therefore, any valid expression must contain 3 binary functions (the # of 4's used is #binary+1)
+and any number of unary functions. Once we have constructed an expression containing 3 binary functions,
+it is a valid expression and may be evaluated. Whether it is the one we are looking for is not so sure...
+
+THE ALGORITHM: The algorithm for solving this problem involves the generation of successive dictionaries
+containing expressions that make use of one 4, two 4's, three 4's, and finally four 4's. To construct
+the first dictionary (expressions with one 4), we start simply with the number 4, and then repeatedly
+apply all unary operators to it. Any time an expression evaluates to a number that is not in the dictionary,
+we add it to the dictionary. We also set a limit on the max number of unary functions that can be applied,
+and the maximum value that we will keep in our dictionary (repeated factorials become astronomically
+large after a short time). Once this is done, our first dictionary is complete. Then, to construct the
+second dictionary (expressions containing two 4's), we apply all binary functions to all possible
+combinations of expressions from the first dictionary, saving new values. We then apply all unary
+functions to these expressions, also saving new values. Then we build the third dictionary in the same
+way, using all pairs of the first and second dictionary (1+2=3), and finally the fourth dictionary
+using all the previous dictionaries (1+3=2+2=4). Then, we simply list the keys and associated expressions
+of the fourth dictionary in numerical order.
+This algorithm can easily be generalized to numbers other than 4 (five 5's, six 6's, etc.), as has been
+done in the script.
+
 @author: 27182_000
 """
 

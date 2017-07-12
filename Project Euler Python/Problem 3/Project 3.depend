@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1340688141 source:c:\users\eric\documents\programming\c\projects\project euler\project 3\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1340690735 source:c:\users\eric\documents\programming\c\projects\project euler\project 3\main2.c
+	<stdio.h>
+	<stdlib.h>
+
+1340691234 source:c:\users\eric\documents\programming\c\projects\project euler\problem 3\main.c
+	<stdio.h>
+	<stdlib.h>
+

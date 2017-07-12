@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1340823557 source:c:\users\eric\documents\programming\c\projects\project euler\project 4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -44,7 +44,7 @@ import scipy as sp
 
 # global variables important for the running of the algorithm
 FOUR = 4                    # the most important number - it determines that we're playing 4 4's (could be modified so that we're playing 3 3's, 5 5's, etc.)
-MAXVALUE = 10**3            # maximum value to be stored in hash tables/dictionaries (repeated factorials can quickly produce astronomically large numbers)
+MAXVALUE = 5*10**3            # maximum value to be stored in hash tables/dictionaries (repeated factorials can quickly produce astronomically large numbers)
 EPSILON = 10**-4            # if floats are produced by the calculations, and they are within <EPSILON> of the closest integer, it just rounds them
 ROUNDING_LEVEL = 6          # the digits of rounding to be used on floats (only relevant if not requiring values at each step)
 MAXUNARY = 3                # maximum number of unary functions to apply between each application of binary functions

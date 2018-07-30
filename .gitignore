@@ -1,3 +1,7 @@
+# Jetbrains project files
+
+*.idea/
+
 # Java class files
 *.class
 
